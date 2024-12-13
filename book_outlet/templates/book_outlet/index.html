@@ -1,0 +1,28 @@
+{% extends "book_outlet/base.html" %}
+{%load static%}
+
+{%block title%}
+ All Books
+{% endblock%}
+{%block css_files %}
+ <link rel=stylesheet href="{% static "book_outlet\index.css" %}"/>
+{%endblock%}
+
+<section id="b1">
+{% block content%}
+
+<div class="d1">
+ <ul>{% for book in books%}
+    <li><button class="t1" ><a href="{{book.get_absolute_url}}">{{book.title}}</a>  </button> ( RATING:---{{book.rating}} ) </li>
+
+    {%endfor%}
+ </ul>
+</div>
+
+<div class="d2">
+<p>NUMBER OF BOOKS:---:{{total_number_of_books}}</p>
+<p>TOTAL AVERAGE RATING:---:{{average_rating}}</p>
+</div>
+
+{%endblock%}
+</section>

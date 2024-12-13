@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    "python.autoComplete.extraPaths": ["./my_site"],
+    "django.debug": true
+  }

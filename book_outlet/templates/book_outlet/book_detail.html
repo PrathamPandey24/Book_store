@@ -1,0 +1,31 @@
+{% extends "book_outlet/base.html"%}
+{%load static%}
+
+{% block title%}
+ {{title}}
+{% endblock %}
+
+
+
+
+{%block css_files %}
+<link rel="stylesheet" href="../static/book_outlet/book_detail.css" />
+{%endblock%}
+
+
+
+
+{% block content%}
+   <h1>{{title}}</h1>
+   <h2>{{author}}</h2>
+   <p>The book has a rating of {{rating}} 
+
+   {%if is_bestseller%}
+     and is bestseller.
+   {%else%}
+     and isnot a bestseller.
+   {%endif%}
+   </p>
+   <h3><p> Published in </p>{{published_in}}</h3>
+  
+{% endblock %}
